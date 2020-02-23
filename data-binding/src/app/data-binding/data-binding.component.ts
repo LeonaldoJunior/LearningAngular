@@ -14,7 +14,7 @@ export class DataBindingComponent implements OnInit {
   getValor(){
     return 1;
   }
-
+  getCurtirCurso = () => true;
   constructor() { }
 
   ngOnInit() {
