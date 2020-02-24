@@ -11,12 +11,20 @@ export class DataBindingComponent implements OnInit {
   cursoAngular: boolean = true;
   urlImagem = 'http://lorempixel.com/400/200/nature/';
 
+  valorAtual: string = '';
+  valorSalvo;
+  isMouseOver = false;
+
   getValor(){
     return 1;
-  }
+  } 
   getCurtirCurso = () => true;
   constructor() { }
 
+  botaoClicado = () => alert("Voce clicou");
+  unKeyUp = evento => this.valorAtual = evento.target.value;
+  salvarValor = valor => this.valorSalvo = valor;
+  onMouseOverOut = () => this.isMouseOver = !this.isMouseOver; 
   ngOnInit() {
   }
 
