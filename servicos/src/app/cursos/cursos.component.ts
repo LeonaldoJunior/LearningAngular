@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { CursosServices } from './cursos.service'
 
+
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
@@ -10,11 +11,12 @@ import { CursosServices } from './cursos.service'
 export class CursosComponent implements OnInit {
 
   cursos: string[] = [];
-  cursosService: CursosServices;
+  // cursosService: CursosServices;
   
 
-  constructor() { 
-    this.cursosService = new CursosServices();
+  constructor(private cursosService: CursosServices) { 
+    // this.cursosService = new CursosServices();
+    // this.cursosService = _cursosService;
   }
 
   ngOnInit() {
