@@ -30,5 +30,4 @@ export class CursosComponent implements OnInit {
     //   curso => console.log(curso)
     );
   }
-r
 }
