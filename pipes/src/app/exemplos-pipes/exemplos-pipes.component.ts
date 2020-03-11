@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { interval } from 'rxjs';
+import { interval, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -38,11 +38,12 @@ export class ExemplosPipesComponent implements OnInit {
     });
   }
   
-  // valorAsync = new Promise((resolve,reject) => {
-  //   setTimeout(() => resolve('Valor Assincrono'), 2000)
-  // })
+  valorAsync = new Promise((resolve,reject) => {
+    setTimeout(() => resolve('Valor Assincrono'), 2000)
+  })
 
-  // valorAsync2 = interval(2000).pipe(map(valor => 'Valor assíncrono 2'));
+   valorAsync2 = interval(2000).pipe(map(valor => 'Valor assíncrono 2'));
+  // valorAsync2 = Observable.interval(2000).map(valor => 'Valor assincrono 2')
 
 
   constructor() {
